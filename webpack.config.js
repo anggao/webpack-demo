@@ -1,9 +1,18 @@
+var path = require('path');
+
+
 module.exports = {
-  entry: ["./utils.js", "./app.js"],
+  context: path.resolve('js'),
+  entry: ["./utils.js", "./app"],
   output: {
+    path: path.resolve('build/js/'),
+    publicPath: '/public/assets/js/',
     filename: "bundle.js"
   },
   watch: true,
+  devServer: {
+    contentBase: 'public'
+  },
   module: {
     preloaders: [
       {
