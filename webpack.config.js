@@ -50,7 +50,7 @@ module.exports = {
       {
         test: /\.json$/,
         exclude: /node_modules/,
-        loader: "json-loader!" + path.reslove('loaders/strip')
+        loader: "json-loader!" + path.resolve('loaders/strip')
       }
     ]
   },
